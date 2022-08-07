@@ -11,11 +11,11 @@ function gastoConIva(num){
     return (num*0.21)+num;
 }
 
-function map(array, callback) {
+function map(array, funcionCallback) {
     const resultado = [];
 
     for (let i=0;i<array.length;i++){
-        resultado.push(callback(Number(array[i])));
+        resultado.push(funcionCallback(Number(array[i])));
     }
     return resultado;
 }
