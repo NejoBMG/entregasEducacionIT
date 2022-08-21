@@ -2,18 +2,16 @@
 DESAFIO FETCH
 Consumir la api fake de https://jsonplaceholder.typicode.com/ implementando API Fetch y pintar en nuestro html (utilizando bootstrap vía cdn para los estilos) una tabla de 10 usuarios y debe contener las propiedades en sus columnas de Id, name, username, email y address-street.
 */ 
-let users;
 const datosUsuarios = async()=>{
     const datos = await fetch('https://jsonplaceholder.typicode.com/users');
     const res = await datos.json();
-    users = res;
-    printsUser();
+    printUser(res);
 }
 datosUsuarios();
 
-const table = document.getElementById('dataUsersRows');
-
-function printsUser(){
+function printUser(res){
+    let users = res;
+    const table = document.getElementById('dataUsersRows');
     users.forEach((element)=>{
         const {id,name,username,email,address} = element;
         const street = address.street;
