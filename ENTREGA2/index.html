@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        form{
+            display: flex;
+            margin: auto;
+            padding: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            width: 18rem;
+            height: 8rem;
+            background-color: #1597ff;
+            border: 2px solid #222;
+            border-radius: 1rem;
+        }
+        #inputPassword{
+            width: 80%;
+            height: 1.3rem;
+            align-self: flex-start;
+            padding-left: 1rem;
+        }
+        #contador{
+            position: absolute;
+            font-size: 20px;
+            top: 2rem;
+            margin-left: 16rem;
+        }
+        #buttonSubmit{
+            width: 30%;
+            height: 1.5rem;
+            font-weight: bold;
+        }
+        #inputPassword,#buttonSubmit{
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+        #message{
+            width: 90%;
+            height: 2rem;
+            font-size: 12px;
+            text-align: center;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="password" id="inputPassword" placeholder="Insertar Contraseña">
+        <span id="contador">0</span>
+        <button type="submit" id="buttonSubmit" disabled>Enviar</button>
+        <span id="message">Debe contener 1 minúscula, 1 mayúscula.<br>Mínimo 12 caracteres</span>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
